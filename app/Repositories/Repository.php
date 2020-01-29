@@ -16,6 +16,11 @@ class Repository
         return $this->model->all();
     }
 
+    public function store()
+    {
+        return $this->model->store();
+    }
+
     public function findOrFail($id)
     {
         return $this->model->findOrFail($id);

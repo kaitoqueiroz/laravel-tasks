@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Repositories\OrdersRepository;
 use App\Repositories\SubscriptionsRepository;
 use App\Models\Subscription;
 use App\Models\Order;
