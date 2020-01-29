@@ -7,6 +7,35 @@ Be sure to have installed in your machine the following:
 
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
+Run the commands
+
+```
+git clone https://github.com/kaitoqueiroz/laravel-tasks.git
+
+cd laravel-tasks
+
+docker-compose build
+
+docker-compose up
+
+docker exec -it app composer update
+
+docker exec -it app mv .env.example .env
+
+docker exec -it app php artisan key:generate
+
+docker exec -it app php artisan migrate
+
+docker exec -it app php artisan db:seed
+
+```
+
+Run Tests:
+
+```
+docker exec -it app php vendor/bin/phpunit
+```
+
 # Tasks
 
 ### 1. Create an order for a customer based on his subscription next order date
