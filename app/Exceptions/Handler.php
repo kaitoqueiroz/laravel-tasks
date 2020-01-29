@@ -55,10 +55,13 @@ class Handler extends ExceptionHandler
     {
         // This will replace our 404 response with
         // a JSON response.
-        if ($exception instanceof ModelNotFoundException) {
-            return response()->json([
-                'error' => $exception->getMessage()
-            ], 404);
+
+        if ($this->isHttpException($exception)) {
+            if ($exception->getStatusCode() == 404) {
+                return response()->json([
+                    'error' => '404 - Endpoint not found.'
+                ], 404);
+            }
         }
 
         if ($exception instanceof MethodNotAllowedHttpException) {

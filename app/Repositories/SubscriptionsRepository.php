@@ -23,8 +23,6 @@ class SubscriptionsRepository extends Repository
         $this->model->next_order_date = $nextOrderDate->format('Y-m-d');
         $this->model->save();
 
-        dd($this->model);
-
         return $this->model;
     }
 

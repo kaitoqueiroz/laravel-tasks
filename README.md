@@ -53,7 +53,7 @@ The command for task #1 will execute automatically the task #2. The next order d
 
 ### 3. Set the iteration frequency for a customer
 
-send a `PUT` request to [http://localhost/api/customers/set-iteration-frequency](http://localhost/api/customers/set-iteration-frequency) with Content-Type `application/json`
+send a `PUT` request to [http://localhost/api/subscriptions/set-iteration-frequency](http://localhost/api/subscriptions/set-iteration-frequency) with Content-Type `application/json`
 
 Having in the body:
 ```

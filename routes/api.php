@@ -26,8 +26,8 @@ Route::get('subscriptions', 'SubscriptionsController@index');
 Route::get('orders/create', 'OrdersController@create');
 
 Route::put(
-    'customers/set-iteration-frequency',
-    'CustomersController@setIterationFrequency'
+    'subscriptions/set-iteration-frequency',
+    'SubscriptionsController@setIterationFrequency'
 );
 Route::get(
     'customers/last-paid-order',
