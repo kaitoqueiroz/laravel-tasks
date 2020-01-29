@@ -4,12 +4,9 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class EndpointsTest extends TestCase
 {
-    use DatabaseMigrations;
-
     /**
      * Test GET '/api/unexisting-endpoint-url' endpoint not found.
      *

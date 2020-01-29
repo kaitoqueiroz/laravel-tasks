@@ -6,12 +6,9 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use App\Models\Customer;
 use App\Models\Subscription;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class TasksTest extends TestCase
 {
-    use DatabaseMigrations;
-
     /**
      * Test GET '/api/customers/last-paid-order' endpoint.
      *
@@ -50,8 +47,6 @@ class TasksTest extends TestCase
             'day_iteration' => 50,
         ]);
 
-        $response = $this->get('/api/subscriptions/set-iteration-frequency');
-
         $payload = [ 'customer_id' => $customer->id, 'frequency' => $dayIteration ];
 
         $response = $this->json('PUT', '/api/subscriptions/set-iteration-frequency', $payload);
@@ -75,8 +70,6 @@ class TasksTest extends TestCase
             'customer_id' => $customer->id,
             'day_iteration' => 50,
         ]);
-
-        $response = $this->get('/api/subscriptions/set-iteration-frequency');
 
         $payload = [ 'frequency' => $dayIteration ];
 
@@ -106,8 +99,6 @@ class TasksTest extends TestCase
             'day_iteration' => 50,
         ]);
 
-        $response = $this->get('/api/subscriptions/set-iteration-frequency');
-
         $payload = [ 'customer_id' => $customer->id ];
 
         $response = $this->json('PUT', '/api/subscriptions/set-iteration-frequency', $payload);
@@ -135,8 +126,6 @@ class TasksTest extends TestCase
             'customer_id' => $customer->id,
             'day_iteration' => 50,
         ]);
-
-        $response = $this->get('/api/subscriptions/set-iteration-frequency');
 
         $payload = [ 'customer_id' => 99999999, 'frequency' => $dayIteration ];
 
