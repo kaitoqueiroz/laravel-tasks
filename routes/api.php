@@ -22,8 +22,11 @@ Route::get('customers', 'CustomersController@index');
 Route::get('customers/show/{id}', 'CustomersController@show');
 Route::get('orders', 'OrdersController@index');
 Route::get('subscriptions', 'SubscriptionsController@index');
+Route::get('deliveries', 'DeliveriesController@index');
 
 Route::get('orders/create', 'OrdersController@create');
+Route::put('orders/set-to-paid/{orderId}', 'OrdersController@setToPaid');
+Route::get('deliveries/export-csv', 'DeliveriesController@exportCsv');
 
 Route::put(
     'subscriptions/set-iteration-frequency',

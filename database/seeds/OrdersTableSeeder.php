@@ -20,7 +20,7 @@ class OrdersTableSeeder extends Seeder
                 'subscription_id' => 1,
                 'status' => 'failed',
                 'total' => 50,
-                'paid_date' => '2019-12-16'
+                'paid_date' => null
             ],
             [
                 'id' => 2,
