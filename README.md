@@ -74,3 +74,13 @@ Do a GET Request to [http://localhost/api/customers/more-than-one-paid-order](ht
 ### 6. Get all customers with an active subscription and with at least one paid order
 
 Do a GET Request to [http://localhost/api/customers/active-subscription-and-paid-order](http://localhost/api/customers/active-subscription-and-paid-order) or just access with the browser
+
+## Deliveries
+
+### 7. Create deliveries when an order is set to paid
+
+Do a PUT Request to [http://localhost/api/orders/set-to-paid/<ORDER_ID>](http://localhost/api/orders/set-to-paid/<ORDER_ID>) and it will set the order to paid and automatically creates a new Delivery.
+
+### 8. Export deliveries to CSV
+
+Do a GET Request to [http://localhost/api/deliveries/export-csv](http://localhost/api/deliveries/export-csv) or just access with the browser.
